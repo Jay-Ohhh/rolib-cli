@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "allowSyntheticDefaultImports": true /* 用来指定允许从没有默认导出的模块中默认导入 */,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"] /* 编译过程中需要引入的库文件的列表 */,
+    "strict": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true /* 用于指定是否启用实验性的装饰器特性 */,
+    "downlevelIteration": true /* 当target为'ES5' or 'ES3'时，为'for-of', spread, and destructuring'中的迭代器提供完全支持 */,
+    "allowJs": true,
+    "esModuleInterop": true /* 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性，esModuleInterop选项的作用是支持使用import d from 'cjs'的方式引入commonjs包 */,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true /* 	禁止对同一个文件的不一致的引用。 */,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true /* 用于检查switch中是否有case没有使用break跳出switch，默认为false */,
+    "noImplicitAny": false /* noImplicitAny的值为false时，如果我们没有为一些值设置明确的类型，编译器会默认认为这个值为any，如果noImplicitAny的值为true的话。则没有明确的类型会报错。默认值为false */,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // 生成.d.ts文件
+    "declaration": true,
+    "declarationDir": "./types"
+  },
+  "include": ["src"],
+  "exclude": ["**/node_modules/**", "build", "dist", "out"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"], // 需安装 tsconfig-paths
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}

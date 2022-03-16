@@ -1,0 +1,4 @@
+./*.js linguist-vendored
+src/libConfigs/** linguist-vendored
+.husky/** linguist-vendored
+.github/** linguist-vendored

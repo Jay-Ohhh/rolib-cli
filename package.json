@@ -1,7 +1,7 @@
 {
   "name": "rolib-cli",
   "version": "1.0.1",
-  "description": "A rollup cli: create a development includes Rollup, TypeScrit, Babel, Git, ESlint, Prettier...",
+  "description": "A rollup cli: create a dev-environment includes Rollup, TypeScrit, Babel, Git, ESlint, Prettier...",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/src/index.d.ts",

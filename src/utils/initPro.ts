@@ -83,7 +83,7 @@ export async function selectFeature() {
     },
     {
       type: 'confirm',
-      name: 'lint',
+      name: 'ESlintPrettier',
       message: 'Install Eslint and Prettier?',
       default: true,
     },
@@ -95,9 +95,16 @@ export async function selectFeature() {
   }
   // 默认安装 TypeScript、Babel、Rollup
   const features = ['TypeScript', 'Babel', 'Rollup', ...(answers.gitRelated || [])];
-  if (answers.lint) {
-    features.push('ESlintPrettier');
-  }
+
+  const confirmTypes: string[] = [];
+
+  questions.slice(1).forEach(q => {
+    q.type === 'confirm' && confirmTypes.push(q.name);
+  });
+
+  confirmTypes.forEach(v => {
+    answers[v] && features.push(v);
+  });
 
   await installFeatures(features);
 }

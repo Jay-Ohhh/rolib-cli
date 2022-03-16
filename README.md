@@ -46,7 +46,7 @@ my-app
 ```typescript
 // src/utils/installName.ts
 // you need to prefix "install" in the filename
-// "Name" is the value that user select feature via inquier.prompt
+// "Name" is the value that user select feature via inquirer.prompt
 
 export async function installName(){
     // code...
@@ -94,9 +94,15 @@ export async function selectFeature() {
 
     const features = [...(answers.multiple|| [])]; // type checkbox
 
-    if (answers.Name3) { // type confirm
-        features.push('Name3');
-    }
+    const confirmTypes: string[] = []; // type confirm
+
+    questions.slice(1).forEach(q => {
+        q.type === 'confirm' && confirmTypes.push(q.name);
+    });
+
+    confirmTypes.forEach(v => {
+        answers[v] && features.push(v);
+    });
 
     await installFeatures(features);
 }

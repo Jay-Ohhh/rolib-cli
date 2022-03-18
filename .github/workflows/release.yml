@@ -1,9 +1,9 @@
-name: sync publish
+name: release
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*'
 
 jobs:
   deploy_pulish:
@@ -22,17 +22,6 @@ jobs:
       # 如果没有安装node，默认支持npm、yarn等包管理器
       - run: npm install
       - run: npm run build
-
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          # 注意在Github Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-        with:
-          # 注意替换为你的 GitHub 源仓库地址
-          source-repo: git@github.com:Jay-Ohhh/rolib-cli.git
-          # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:Jay_Ohhh/rolib-cli.git
 
       # 手动修改pacakeg.json version(npm版本)比较好，因为自己比较好确定patch, minor or major
       # 也可以尝试使用action：npm version and publish

@@ -1,4 +1,5 @@
-node_modules
-dist
-build
-out
+/node_modules
+/dist
+/build
+/out
+/test.js

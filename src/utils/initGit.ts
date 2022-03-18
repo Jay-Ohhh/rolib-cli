@@ -14,10 +14,8 @@ export async function initGit() {
   }
 
   try {
-    const gitignore = ['node_modules', 'dist', 'out'];
-    const gitattributes = ['./*.js linguist-vendored', '.husky/** linguist-vendored', '.github/** linguist-vendored'];
+    const gitignore = ['/node_modules', '/dist', '/out'];
     await writeFile(`.gitignore`, gitignore.join('\n'));
-    await writeFile(`.gitattributes`, gitattributes.join('\n'));
   } catch (e) {
     console.log(symbols.error, red('Failed to set a .gitignore or .gitattributes file'));
     process.exit();

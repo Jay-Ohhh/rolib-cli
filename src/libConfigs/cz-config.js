@@ -10,7 +10,7 @@ const config = {
     { value: '👷 ci', name: '👷 ci:         CI configuration related e.g. changes to k8s，docker configuration files' },
     { value: '📦‍ build', name: '📦‍ build:      Changes to the build process or auxiliary tools' },
     { value: '🍻 chore', name: '🍻 chore:      chroe' },
-    { value: '💊  revert', name: '💊 revert:     Reverts a previous commi' },
+    { value: '💊 revert', name: '💊 revert:     Reverts a previous commit' },
   ],
   scopes: [{ name: 'docs' }, { name: 'ci' }, { name: 'style' }],
 

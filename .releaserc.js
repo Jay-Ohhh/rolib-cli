@@ -1,10 +1,10 @@
 module.exports = {
-  branches: [
+  branches: [ // 指定在哪个分支下要执行发布操作
     'master',
     {
-      name: 'beta', prerelease: true // beta 分支为 预发布 分支
+      name: 'beta', prerelease: true // beta 分支为 预发布 分支 2.0.0-beta.1, 2.0.0-beta.2, etc...
     }
-  ], // 指定在哪个分支下要执行发布操作
+  ],
   plugins: [ // 插件有顺序要求
     [
       '@semantic-release/commit-analyzer', // semantic-release plugin to analyze commits with conventional-changelog
@@ -15,7 +15,7 @@ module.exports = {
           { type: 'feat', release: 'minor' },
           { type: 'fix', release: 'patch' },
           { type: 'perf', release: 'patch' },
-          { type: 'type', release: 'patch' },
+          { type: 'style', release: 'patch' },
           { type: 'revert', release: 'patch' },
           { breaking: true, release: 'major' }, // https://www.conventionalcommits.org/en a commit that has a footer BREAKING  CHANGE: 
         ],
@@ -27,19 +27,19 @@ module.exports = {
     ['@semantic-release/release-notes-generator', // semantic-release plugin to generate changelog content(非文件) with conventional-changelog
       {
         preset: "emoji-config",
-        presetConfig: { // conventional changelog config
-          "types": [
-            { "type": "feat", "section": "✨ Features | 新功能" },
-            { "type": "fix", "section": "🛠️ Bug Fixes | Bug 修复" },
-            { "type": "docs", "section": "📝 Documentation | 文档" },
-            { "type": "style", "section": "🎨 Styles | 风格" },
-            { "type": "refactor", "section": "♻️ Code Refactoring | 代码重构" },
-            { "type": "perf", "section": "🚀 Performance Improvements | 性能优化" },
-            { "type": "test", "section": "📸 Tests | 测试" },
-            { "type": "build", "section": "📦‍ Build System | 打包构建" },
-            { "type": "ci", "section": "🐳 Continuous Integration | CI 配置" },
-            { "type": "chore", "section": "🍮 Chore | 构建/工程依赖/工具" },
-            { "type": "revert", "section": "💊 Revert | 回退" }
+        presetConfig: { // conventional changelog config https://github.com/conventional-changelog/conventional-changelog-config-spec
+          "types": [ // 需要和 .cz-config.js 、changlogrc.js 的 type 保持一致
+            { "type": "✨ feat", "section": "✨ Features | 新功能" },
+            { "type": "🔧 fix", "section": "🛠️ Bug Fixes | Bug 修复" },
+            { "type": "📝 docs", "section": "📝 Documentation | 文档" },
+            { "type": "🎨 style", "section": "🎨 Styles | 风格" },
+            { "type": "♻️ refactor", "section": "♻️ Code Refactoring | 代码重构" },
+            { "type": "🚀 perf", "section": "🚀 Performance Improvements | 性能优化" },
+            { "type": "🧪 test", "section": "📸 Tests | 测试" },
+            { "type": "📦‍ build", "section": "📦‍ Build System | 打包构建" },
+            { "type": "👷 ci", "section": "🐳 Continuous Integration | CI 配置" },
+            { "type": "🍻 chore", "section": "🍻 chore | 构建/工程依赖/工具" },
+            { "type": "💊 revert", "section": "💊 Revert | 回退" }
           ]
         }
       }
@@ -51,7 +51,7 @@ module.exports = {
       }
     ],
     // 需要NPM_TOKEN，命令行cross-env、或 .npmrc 文件 或在 github actions中定义
-    //Update the package.json version
+    // 根据commit type，Update the package.json version
     '@semantic-release/npm',  // semantic-release plugin to publish a npm package.
     // 需要GITHUB_TOKEN
     [

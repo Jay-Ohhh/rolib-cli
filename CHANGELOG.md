@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.1.0...v1.1.1) (2022-03-19)
+
+
+### 🚀 Performance Improvements
+
+* test perf ([842a723](https://github.com/Jay-Ohhh/rolib-cli/commit/842a723))
+
 # [1.1.0](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.0.0...v1.1.0) (2022-03-19)
 
 

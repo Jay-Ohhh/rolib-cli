@@ -9,7 +9,7 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer', // semantic-release plugin to analyze commits with conventional-changelog
       {
-        preset: "emoji-config", // 需安装 conventional-changelog-emoji-config
+        preset: "conventionalcommits", // 需安装 conventional-changelog-emoji-config
         // 没列在这里或者不在 default release rules(https://github.com/semantic-release/commit-analyzer/blob/master/lib/default-release-rules.js) 里的规则，不会进行 release
         "releaseRules": [
           { type: 'feat', release: 'minor' },
@@ -27,17 +27,17 @@ module.exports = {
     ['@semantic-release/release-notes-generator', // semantic-release plugin to generate changelog content(非文件) with conventional-changelog
       {
         preset: "conventionalcommits",
-        presetConfig: { // conventional changelog config https://github.com/conventional-changelog/conventional-changelog-config-spec
-          "types": [ // 需要和 .cz-config.js 、changlogrc.js 的 type 保持一致
+        presetConfig: {
+          "types": [
             { "type": "feat", "section": "✨ Features | 新功能" },
             { "type": "fix", "section": "🛠️ Bug Fixes | Bug 修复" },
             { "type": "docs", "section": "📝 Documentation | 文档" },
             { "type": "style", "section": "🎨 Styles | 风格" },
             { "type": "refactor", "section": "♻️ Code Refactoring | 代码重构" },
-            { "type": "perf", "section": "🚀 Performance | 性能优化" },
+            { "type": "perf", "section": "🚀 Performance Improvements | 性能优化" },
             { "type": "test", "section": "📸 Tests | 测试" },
-            { "type": "ci", "section": "📦‍ Build System | 打包构建" },
-            { "type": "build", "section": "🐳 Continuous Integration | CI 配置" },
+            { "type": "build", "section": "📦‍ Build System | 打包构建" },
+            { "type": "ci", "section": "🐳 Continuous Integration | CI 配置" },
             { "type": "chore", "section": "🍮 Chore | 构建/工程依赖/工具" },
             { "type": "revert", "section": "💊 Revert | 回退" }
           ]

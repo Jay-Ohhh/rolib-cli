@@ -1,16 +1,16 @@
 module.exports = {
   types: [
-    { value: '✨ feat', name: '✨ feat:       A new feature' },
-    { value: '🔧 fix', name: '🔧 fix:        A bug fix' },
-    { value: '📝 docs', name: '📝 docs:       Documentation only changes' },
-    { value: '🎨 style', name: '🎨 style:      Changes that do not affect the meaning of the code' },
-    { value: '♻️ refactor', name: '♻️  refactor:   A code change that neither fixes a bug nor adds a feature' },
-    { value: '🚀 perf', name: '🚀 perf:       A code change that improves performance' },
-    { value: '🧪 test', name: '🧪 test:       Adding missing or correcting existing tests' },
-    { value: '👷 ci', name: '👷 ci:         CI configuration related e.g. changes to k8s，docker configuration files' },
-    { value: '📦‍ build', name: '📦‍ build:      Changes to the build process or auxiliary tools' },
-    { value: '🍻 chore', name: '🍻 chore:      chroe' },
-    { value: '💊 revert', name: '💊 revert:     Reverts a previous commit' }
+    { value: 'feat', name: '✨ feat:       A new feature' },
+    { value: 'fix', name: '🔧 fix:        A bug fix' },
+    { value: 'docs', name: '📝 docs:       Documentation only changes' },
+    { value: 'style', name: '🎨 style:      Changes that do not affect the meaning of the code' },
+    { value: 'refactor', name: '♻️  refactor:   A code change that neither fixes a bug nor adds a feature' },
+    { value: 'perf', name: '🚀 perf:       A code change that improves performance' },
+    { value: 'test', name: '🧪 test:       Adding missing or correcting existing tests' },
+    { value: 'ci', name: '👷 ci:         CI configuration related e.g. changes to k8s，docker configuration files' },
+    { value: 'build', name: '📦‍ build:      Changes to the build process or auxiliary tools' },
+    { value: 'chore', name: '🍻 chore:      chroe' },
+    { value: 'revert', name: '💊 revert:     Reverts a previous commit' }
   ],
   scopes: [
     { name: 'docs' },

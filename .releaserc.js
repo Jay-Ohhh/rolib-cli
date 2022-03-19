@@ -9,7 +9,7 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer', // semantic-release plugin to analyze commits with conventional-changelog
       {
-        "preset": "emoji-config", // 需安装 conventional-changelog-emoji-config
+        preset: "emoji-config", // 需安装 conventional-changelog-emoji-config
         // 没列在这里或者不在 default release rules(https://github.com/semantic-release/commit-analyzer/blob/master/lib/default-release-rules.js) 里的规则，不会进行 release
         "releaseRules": [
           { type: 'feat', release: 'minor' },
@@ -26,6 +26,7 @@ module.exports = {
     ],
     ['@semantic-release/release-notes-generator', // semantic-release plugin to generate changelog content(非文件) with conventional-changelog
       {
+        preset: "emoji-config",
         presetConfig: { // conventional changelog config
           "types": [
             { "type": "feat", "section": "✨ Features | 新功能" },
@@ -62,6 +63,7 @@ module.exports = {
     [
       '@semantic-release/git', // semantic-release plugin to commit release assets to the project's git repository.
       {
+        assets: ['CHANGELOG.md', 'package.json'],
         message: "🍺 chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]

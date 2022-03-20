@@ -93,13 +93,13 @@ export async function selectFeature() {
 
     const features = [...(answers.multiple|| [])]; // type checkbox
 
-    const confirmTypes: string[] = []; // type confirm
+    const confirmIds: string[] = []; // type confirm
 
     questions.slice(1).forEach(q => {
-        q.type === 'confirm' && confirmTypes.push(q.name);
+        q.type === 'confirm' && confirmIds.push(q.name);
     });
 
-    confirmTypes.forEach(v => {
+    confirmIds.forEach(v => {
         answers[v] && features.push(v);
     });
 

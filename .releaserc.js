@@ -9,7 +9,7 @@ module.exports = {
     [
       '@semantic-release/commit-analyzer', // semantic-release plugin to analyze commits with conventional-changelog
       {
-        preset: "conventionalcommits", // 需安装 conventional-changelog-emoji-config
+        preset: "conventionalcommits", // 需安装 conventional-changelog-conventionalcommits
         // 没列在这里或者不在 default release rules(https://github.com/semantic-release/commit-analyzer/blob/master/lib/default-release-rules.js) 里的规则，不会进行 release
         "releaseRules": [
           { type: 'feat', release: 'minor' },
@@ -27,7 +27,7 @@ module.exports = {
     ['@semantic-release/release-notes-generator', // semantic-release plugin to generate changelog content(非文件) with conventional-changelog
       {
         preset: "conventionalcommits",
-        presetConfig: {
+        presetConfig: { // Conventional Changelog Configuration Spec, https://github.com/conventional-changelog/conventional-changelog-config-spec
           "types": [
             { "type": "feat", "section": "✨ Features | 新功能" },
             { "type": "fix", "section": "🛠️ Bug Fixes | Bug 修复" },

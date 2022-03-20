@@ -8,6 +8,7 @@ import { installCommitlint } from './installCommitlint';
 import { installTypeScript } from './installTypeScript';
 import { installBabel } from './installBabel';
 import { installRollup } from './installRollup';
+import { installSemanticRelease } from './installSemanticRelease';
 
 export const installMethods = {
   installESlintPrettier,
@@ -17,4 +18,5 @@ export const installMethods = {
   installTypeScript,
   installBabel,
   installRollup,
+  installSemanticRelease,
 };

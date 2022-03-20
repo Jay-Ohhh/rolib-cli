@@ -7,7 +7,7 @@ import { Ora } from 'ora';
 
 export async function installCommitlint(spinner: Ora) {
   try {
-    const libs = ['@commitlint/cli', 'commitlint-config-git-commit-emoji'];
+    const libs = ['@commitlint/cli', '@commitlint/config-conventional'];
     await execa('npm i -D', libs);
   } catch (e: any) {
     console.log(e.stderr);

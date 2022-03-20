@@ -87,6 +87,12 @@ export async function selectFeature() {
       message: 'Install Eslint and Prettier?',
       default: true,
     },
+    {
+      type: 'confirm',
+      name: 'SemanticRelease',
+      message: 'Install semantic-release? (Fully automated version management and package publishing)',
+      default: true,
+    },
   ];
 
   const answers = await inquirer.prompt(questions);
@@ -96,13 +102,13 @@ export async function selectFeature() {
   // 默认安装 TypeScript、Babel、Rollup
   const features = ['TypeScript', 'Babel', 'Rollup', ...(answers.gitRelated || [])];
 
-  const confirmTypes: string[] = [];
+  const confirmIds: string[] = [];
 
   questions.slice(1).forEach(q => {
-    q.type === 'confirm' && confirmTypes.push(q.name);
+    q.type === 'confirm' && confirmIds.push(q.name);
   });
 
-  confirmTypes.forEach(v => {
+  confirmIds.forEach(v => {
     answers[v] && features.push(v);
   });
 

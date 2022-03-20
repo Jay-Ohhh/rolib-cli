@@ -1,7 +1,7 @@
-import execa from 'execa'; // 使用execa@5.x版本，支持commonjs
+import execa from 'execa'; // 使用5.x版本，支持commonjs
 import { readJson, writeJson } from 'fs-extra';
 import { red } from 'chalk';
-import symbols from 'log-symbols';
+import symbols from 'log-symbols'; // 使用4.x版本，支持commonjs
 import { pkgPath, PackageJSON } from './common';
 import tsConfig from '@/libConfigs/ts.json';
 import { Ora } from 'ora';

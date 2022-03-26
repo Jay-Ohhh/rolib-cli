@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.1.5...v1.2.0) (2022-03-20)
+
+
+### ✨ Features | 新功能
+
+* add semantic-release installFeature ([4cb8e73](https://github.com/Jay-Ohhh/rolib-cli/commit/4cb8e73236ae050870cf2560918a244fe62c2a4c))
+
 ### [1.1.5](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.1.4...v1.1.5) (2022-03-19)
 
 

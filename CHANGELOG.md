@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.2.0...v1.2.1) (2022-03-26)
+
+
+### 🛠️ Bug Fixes | Bug 修复
+
+* fix installMethods ([9476127](https://github.com/Jay-Ohhh/rolib-cli/commit/94761277f54209072e6145b14438b30e99c03e6b))
+
 ## [1.2.0](https://github.com/Jay-Ohhh/rolib-cli/compare/v1.1.5...v1.2.0) (2022-03-20)
 
 

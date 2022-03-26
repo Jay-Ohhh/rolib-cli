@@ -12,13 +12,12 @@ export async function installBabel(spinner: Ora) {
       '@babel/preset-env',
       '@babel/preset-typescript',
       '@babel/preset-react',
-      'core-js@3',
       '@babel/plugin-transform-runtime',
-      '@babel/runtime-corejs3',
       '@babel/plugin-proposal-decorators',
       '@babel/plugin-proposal-class-properties',
     ];
     await execa('npm i -D', libs);
+    await execa('npm i', ['@babel/runtime-corejs3']);
   } catch (e: any) {
     console.log(e.stderr);
     console.log(symbols.error, red('Failed to install babel or babel-related libraries'));

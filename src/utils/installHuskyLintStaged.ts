@@ -22,21 +22,22 @@ export async function installHuskyLintStaged(spinner: Ora) {
 
     packageJson.scripts['prepare'] = 'husky install';
     if (packageJson.scripts['lint']) {
+      // 需要先按照 eslint 和 prettier
       packageJson['lint-staged'] = {
         'src/**': ['npm run lint'],
       };
-    } else {
-      packageJson['lint-staged'] = {};
     }
 
     await writeJson(pkgPath, packageJson, { spaces: 2 });
 
     await execa('npm run prepare');
-    await execa('npx husky add .husky/pre-commit "npx lint-staged"').catch(e => {
-      console.log(e.stderr);
-      console.log(symbols.error, red('Failed to add a git hook(pre-commit) by husky'));
-      process.exit();
-    });
+    if (packageJson['lint-staged']) {
+      await execa('npx husky add .husky/pre-commit "npx lint-staged"').catch(e => {
+        console.log(e.stderr);
+        console.log(symbols.error, red('Failed to add a git hook(pre-commit) by husky'));
+        process.exit();
+      });
+    }
 
     spinner.clear();
     console.log(symbols.success, 'Set the husky and lint-staged configuration successfully');

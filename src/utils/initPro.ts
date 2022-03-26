@@ -60,6 +60,12 @@ export async function selectFeature() {
       default: true,
     },
     {
+      type: 'confirm',
+      name: 'ESlintPrettier',
+      message: 'Install Eslint and Prettier?',
+      default: true,
+    },
+    {
       type: 'checkbox',
       name: 'gitRelated',
       when(answer) {
@@ -80,12 +86,6 @@ export async function selectFeature() {
           value: 'Commitlint',
         },
       ],
-    },
-    {
-      type: 'confirm',
-      name: 'ESlintPrettier',
-      message: 'Install Eslint and Prettier?',
-      default: true,
     },
     {
       type: 'confirm',

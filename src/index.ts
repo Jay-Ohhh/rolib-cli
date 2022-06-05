@@ -19,6 +19,7 @@ program
 
 // 创建项目
 // name 和 usage 通过这两个选项可以修改帮助信息(--help)的首行提示
+// <required> or [optional]
 program
   .name('owj-lib-cli')
   .usage('<commands> [options]')

@@ -1,10 +1,11 @@
 <h1 align="center">rolib-cli 🎉</h3>
 <p align="center">A rollup cli : create a dev-environment includes Rollup, TypeScrit, Babel, Git, ESlint, Prettier...</p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/rolib-cli" target="_blank"><img alt="Version" src="https://img.shields.io/npm/v/rolib-cli.svg" /></a>
-  <a href="https://www.npmjs.com/package/rolib-cli" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dm/rolib-cli.svg?color=blue"/></a>
-  <a href="https://github.com/Jay-Ohhh/rolib-cli/blob/master/LICENSE" target="_blank"><img alt="License: MIT" src="https://img.shields.io/github/license/Jay-Ohhh/rolib-cli" /></a>
+  <a href="https://www.npmjs.com/package/rolib-cli" target="_blank" rel="nooppener noreferrer"><img alt="Version" src="https://img.shields.io/npm/v/rolib-cli.svg" /></a>
+  <a href="https://www.npmjs.com/package/rolib-cli" target="_blank" rel="nooppener noreferrer"><img alt="downloads" src="https://img.shields.io/npm/dm/rolib-cli.svg?color=blue"/></a>
+  <a href="https://github.com/Jay-Ohhh/rolib-cli/blob/master/LICENSE" target="_blank" rel="nooppener noreferrer"><img alt="License: MIT" src="https://img.shields.io/github/license/Jay-Ohhh/rolib-cli" /></a>
 </p>
+
 
 
 ## 🚀 Quick Start
@@ -124,7 +125,7 @@ export async function selectFeature() {
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page]([Issues · Jay-Ohhh/rolib-cli · GitHub](https://github.com/Jay-Ohhh/rolib-cli/issues)). You can also take a look at the [contributing guide](https://github.com/Jay-Ohhh/rolib-cli/blob/master/CONTRIBUTING.md).
+Feel free to check [issues page](https://github.com/Jay-Ohhh/rolib-cli/issues). You can also take a look at the [contributing guide](https://github.com/Jay-Ohhh/rolib-cli/blob/master/CONTRIBUTING.md).
 
 ## ✨ Show your support
 
@@ -134,4 +135,4 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2022 [Jay-Ohhh](https://github.com/Jay-Ohhh).
 
-This project is [MIT](https://github.com/Jay-Ohhh/anchor-scroll-menu/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/Jay-Ohhh/rolib-cli/blob/master/LICENSE) licensed.
